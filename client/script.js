@@ -79,7 +79,7 @@ const handleSubmit = async(e) => {
 
     //fetch data from server -> bot's response
     const response = await fetch('https://codex-96kg.onrender.com/', {
-        method: "POST",
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
@@ -89,7 +89,7 @@ const handleSubmit = async(e) => {
     })
 
     clearInterval(loadInterval);
-    messageDiv.innerHTML = '';
+    messageDiv.innerHTML = " ";
 
     if (response.ok) {
         const data = await response.json();
